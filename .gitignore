@@ -1,0 +1,14 @@
+node_modules/
+.vs/
+obj/
+*.code-workspace
+dist/
+types/
+package-lock.json
+old.cs
+Patches.cs
+*.pdb
+*.sln
+*.csproj
+dependencies/
+bin/
