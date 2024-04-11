@@ -6,7 +6,6 @@
  * */
 
 using BepInEx;
-using System.Reflection;
 
 namespace MaxDura
 {

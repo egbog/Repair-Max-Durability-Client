@@ -1,24 +1,14 @@
-﻿using EFT;
-using EFT.InventoryLogic;
+﻿using EFT.InventoryLogic;
 using EFT.UI;
 using EFT.UI.DragAndDrop;
 using System.Reflection;
 using Aki.Reflection.Patching;
 using Aki.Common.Http;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using BSG.CameraEffects;
 using Comfort.Common;
-using System;
-using UnityEngine;
 using UnityEngine.EventSystems;
-using HarmonyLib;
 using EFT.Communications;
 using BepInEx.Logging;
-using UnityEngine.Yoga;
-using System.Security.Policy;
-using Newtonsoft.Json.Serialization;
-using Aki.Common.Utils;
 using Newtonsoft.Json.Linq;
 
 // check ownership to prevent nullpointer when repairing trader stock

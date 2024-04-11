@@ -1,16 +1,6 @@
 ﻿using BepInEx.Logging;
 using EFT.InventoryLogic;
-using JetBrains.Annotations;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static UnityEngine.UIElements.UIRAtlasManager;
 
 namespace MaxDura
 {
