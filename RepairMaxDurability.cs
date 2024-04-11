@@ -32,7 +32,7 @@ namespace MaxDura
 		}
 		public static bool CheckName(Item item)
 		{
-			return item.LocalizedName() == "Spare Firearm Parts";
+			return item.LocalizedName() == "Spare firearm parts";
 		}
 		public static bool CheckDurabilityIsWithinRange(RepairableComponent repairableComponent1)
 		{
