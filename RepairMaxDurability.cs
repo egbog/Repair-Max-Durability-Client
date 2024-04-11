@@ -46,7 +46,7 @@ namespace MaxDura
 		}
 
 		[PatchPrefix]
-		public static bool Postfix(ref ItemView __instance, ItemContextClass dragItemContext, PointerEventData eventData)
+		public static bool Postfix(ref ItemContextClass dragItemContext, ref PointerEventData eventData)
 		{
 			ManualLogSource log = BepInEx.Logging.Logger.CreateLogSource("MaxDura");
             
