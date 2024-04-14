@@ -11,8 +11,6 @@ using EFT.Communications;
 using BepInEx.Logging;
 using Newtonsoft.Json.Linq;
 
-// check ownership to prevent nullpointer when repairing trader stock
-
 namespace MaxDura
 {
 	public class RepairMaxDurability : ModulePatch
