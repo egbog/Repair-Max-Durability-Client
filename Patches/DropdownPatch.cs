@@ -26,7 +26,8 @@ namespace MaxDura
 			// check that we actually have Spare firearm parts in our inventory
 			// get List<GClass802> RepairKitsCollections from GInterface33 __result
 			List<GClass802> check = (List<GClass802>)RepairKitsCollections.GetValue(__result);
-			bool contains = check.Contains(check.First(x => x.LocalizedName == "Spare firearm parts"));
+			//bool contains = check.Contains(check.First(x => x.LocalizedName == "Spare firearm parts"));
+			bool contains = check.Exists(x => x.LocalizedName == "Spare firearm parts");
 
 			// we good to go
 			if (contains)
