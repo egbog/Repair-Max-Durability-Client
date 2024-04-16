@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 using EFT.Communications;
 using BepInEx.Logging;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace MaxDura
 {
@@ -30,13 +31,11 @@ namespace MaxDura
 		}
 		public static bool CheckName(Item item)
 		{
-			return item.LocalizedName() == "Spare firearm parts";
+			return item.LocalizedName().Contains("Spare firearm parts");
 		}
 		public static bool CheckDurabilityIsWithinRange(RepairableComponent repairableComponent1)
 		{
-			string dur = repairableComponent1.Durability.ToString("f2");
-			string maxDur = repairableComponent1.MaxDurability.ToString("f2");
-			return dur == maxDur;
+			return Math.Abs(repairableComponent1.Durability - repairableComponent1.MaxDurability) <= 0.1f;
 		}
 		protected override MethodBase GetTargetMethod()
 		{
