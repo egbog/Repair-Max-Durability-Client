@@ -2,6 +2,7 @@
 using EFT.InventoryLogic;
 using EFT.UI;
 using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -26,8 +27,7 @@ namespace MaxDura
 			// check that we actually have Spare firearm parts in our inventory
 			// get List<GClass802> RepairKitsCollections from GInterface33 __result
 			List<GClass802> check = (List<GClass802>)RepairKitsCollections.GetValue(__result);
-			//bool contains = check.Contains(check.First(x => x.LocalizedName == "Spare firearm parts"));
-			bool contains = check.Exists(x => x.LocalizedName == "Spare firearm parts");
+			bool contains = check.Exists(x => x.LocalizedName.Contains("Spare firearm parts"));
 
 			// we good to go
 			if (contains)
@@ -40,7 +40,7 @@ namespace MaxDura
 				List<GClass802> __list_1 = (List<GClass802>)RepairKitsCollections.GetValue(gclass803);
 
 				// if list contains our item then do work
-				__list_1.Remove(__list_1.First(x => x.LocalizedName == "Spare firearm parts"));
+				__list_1.Remove(__list_1.First(x => x.LocalizedName.Contains("Spare firearm parts")));
 				// replace with our list_1 with Spare firearm parts removed
 				list_1.SetValue(gclass803, __list_1);
 
