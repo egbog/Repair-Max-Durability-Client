@@ -67,9 +67,11 @@ namespace MaxDura
 				// make sure it's an item that can actually be repaired ie. weapon
 				// must contain a RepairableComponent
 				targetItem.TryGetItemComponent<RepairableComponent>(out repairableComponent);
+				// make sure we aren't repairing armor
+				targetItem.TryGetItemComponent<ArmorComponent>(out ArmorComponent armorComponent);
 
 				// check target item ownership
-				start = CheckName(dragItemContext.Item) && CheckOwner(targetItem) && repairableComponent != null;
+				start = CheckName(dragItemContext.Item) && CheckOwner(targetItem) && repairableComponent != null && armorComponent == null;
 			}
 
 			// only do work when our item is dragged AND dragged onto another item
