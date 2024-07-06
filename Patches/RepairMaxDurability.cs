@@ -2,8 +2,8 @@
 using EFT.UI;
 using EFT.UI.DragAndDrop;
 using System.Reflection;
-using Aki.Reflection.Patching;
-using Aki.Common.Http;
+using SPT.Reflection.Patching;
+using SPT.Common.Http;
 using Newtonsoft.Json;
 using Comfort.Common;
 using UnityEngine.EventSystems;

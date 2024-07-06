@@ -9,7 +9,7 @@ using BepInEx;
 
 namespace MaxDura
 {
-    [BepInPlugin("com.egbog.maxdura", "MaxDurability", "1.2.0")]
+    [BepInPlugin("com.egbog.maxdura", "MaxDurability", "1.2.1")]
     [BepInProcess("EscapeFromTarkov.exe")]
     public class Plugin : BaseUnityPlugin
     {
