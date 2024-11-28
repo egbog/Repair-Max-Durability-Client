@@ -2,8 +2,6 @@
 using EFT.InventoryLogic;
 using Newtonsoft.Json.Linq;
 
-using Discarder = GClass2754;
-
 namespace MaxDura
 {
     public class ParseProfile
@@ -15,9 +13,10 @@ namespace MaxDura
         public ParseProfile(JObject json)
         {
             log = BepInEx.Logging.Logger.CreateLogSource("MaxDura");
-            // sophie = item repaired
-            // benji = repair kit
+
+            // item repaired
             JToken sophie = json?.SelectToken("Items").First;
+            // repair kit
             JToken benji = sophie?.Next;
 
             if (sophie != null && benji != null)
@@ -52,10 +51,11 @@ namespace MaxDura
                 //this.log.LogInfo("NEW REPAIR RESOURCE: " + rkc.Resource);
 
                 // delete repair kit at 0 resource or below
-                if (repairKitComponent.Resource <= 0)
-                    Discarder.RemoveItem(repairKit);
+                if (repairKitComponent.Resource <= 0){
+                    TraderControllerClass traderControllerClass = (TraderControllerClass)repairKit.Parent.GetOwner();
+                    traderControllerClass.ThrowItem(repairKit);
                     //this.log.LogInfo("DESTROYED REPAIR KIT");
-
+                }
                 return true; // all is well - minister fudge
             }
             else // here too
