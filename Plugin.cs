@@ -19,7 +19,7 @@ namespace MaxDura
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
             new MaxDura.RepairMaxDurability().Enable();
-			new MaxDura.RepairWindowPatch().Enable();
+            new MaxDura.RepairWindowPatch().Enable();
         }
     }
 }

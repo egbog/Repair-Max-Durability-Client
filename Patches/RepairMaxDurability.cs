@@ -80,15 +80,13 @@ namespace MaxDura
 			{
 				// check if the durability is below 100
 				// set isRepairable to true if it is below 100
-				#pragma warning disable S1244 // Floating point numbers should not be tested for equality
 				bool isRepairable = repairableComponent.MaxDurability != 100f;
-				#pragma warning restore S1244 // Floating point numbers should not be tested for equality
 				bool isWithinRange = CheckDurabilityIsWithinRange(repairableComponent);
 
 				if(!isRepairable) // item already at 100 max durability
 				{
 					Singleton<GUISounds>.Instance.PlayUISound(EUISoundType.ErrorMessage);
-					NotificationManagerClass.DisplayMessageNotification("Item already at maximum durability", ENotificationDurationType.Default, ENotificationIconType.Alert, null);
+					NotificationManagerClass.DisplayMessageNotification("Weapon already at maximum durability", ENotificationDurationType.Default, ENotificationIconType.Alert, null);
 					dragItemContext.DragCancelled();
 					//log.LogInfo("NO REPAIR NECESSARY");
 					return false;
@@ -97,7 +95,7 @@ namespace MaxDura
 				if (!isWithinRange) // current durability is not at the maximum it can be at the moment
 				{
 					Singleton<GUISounds>.Instance.PlayUISound(EUISoundType.ErrorMessage);
-					NotificationManagerClass.DisplayMessageNotification("Item not clean enough to install new parts", ENotificationDurationType.Default, ENotificationIconType.Alert, null);
+					NotificationManagerClass.DisplayMessageNotification("Weapon not clean enough to install new parts", ENotificationDurationType.Default, ENotificationIconType.Alert, null);
 					dragItemContext.DragCancelled();
 					return false;
 				}
@@ -118,7 +116,7 @@ namespace MaxDura
 				{
 					// sound and notification
 					Singleton<GUISounds>.Instance.PlayUISound(EUISoundType.RepairComplete);
-					NotificationManagerClass.DisplayMessageNotification(string.Format("{0} {1:F1}", "Item successfully repaired to".Localized(null),
+					NotificationManagerClass.DisplayMessageNotification(string.Format("{0} {1:F1}", "Weapon successfully repaired to".Localized(null),
 						repairableComponent.MaxDurability), ENotificationDurationType.Default, ENotificationIconType.Default, null);
 					log.LogInfo(status);
 				}
