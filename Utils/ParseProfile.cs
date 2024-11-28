@@ -53,7 +53,7 @@ namespace MaxDura
 
                 // delete repair kit at 0 resource or below
                 if (repairKitComponent.Resource <= 0)
-					Discarder.RemoveItem(repairKit);
+                    Discarder.RemoveItem(repairKit);
                     //this.log.LogInfo("DESTROYED REPAIR KIT");
 
                 return true; // all is well - minister fudge
