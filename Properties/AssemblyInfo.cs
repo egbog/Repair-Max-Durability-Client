@@ -8,7 +8,7 @@
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("egbog")]
 [assembly: AssemblyProduct("MaxDura")]
-[assembly: AssemblyCopyright("Copyright © egbog 2024")]
+[assembly: AssemblyCopyright("Copyright © egbog 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,5 +20,5 @@
 // Revision
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.3.0")]
+[assembly: AssemblyVersion("1.3.1")]
 

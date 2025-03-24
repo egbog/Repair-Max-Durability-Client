@@ -7,8 +7,8 @@ using System.Linq;
 using System.Reflection;
 
 using RepairDropdownInterface = GInterface37;
-using RepairDropdown = GClass874;
-using RepairKits = GClass873;
+using RepairDropdown = GClass884;
+using RepairKits = GClass883;
 
 namespace MaxDura
 {
