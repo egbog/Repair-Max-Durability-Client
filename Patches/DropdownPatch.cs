@@ -1,16 +1,15 @@
-﻿using SPT.Reflection.Patching;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using EFT.InventoryLogic;
 using EFT.UI;
 using HarmonyLib;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
+using SPT.Reflection.Patching;
 using RepairDropdownInterface = GInterface37;
 using RepairDropdown = GClass884;
 using RepairKits = GClass883;
 
-namespace MaxDura
+namespace RepairMaxDurabilityClient.Patches
 {
     public class RepairWindowPatch : ModulePatch
     {

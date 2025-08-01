@@ -1,18 +1,19 @@
-﻿using EFT.InventoryLogic;
+﻿using System;
+using System.Reflection;
+using BepInEx.Logging;
+using Comfort.Common;
+using EFT.Communications;
+using EFT.InventoryLogic;
 using EFT.UI;
 using EFT.UI.DragAndDrop;
-using System.Reflection;
-using SPT.Reflection.Patching;
-using SPT.Common.Http;
 using Newtonsoft.Json;
-using Comfort.Common;
-using UnityEngine.EventSystems;
-using EFT.Communications;
-using BepInEx.Logging;
 using Newtonsoft.Json.Linq;
-using System;
+using RepairMaxDurabilityClient.Utils;
+using SPT.Common.Http;
+using SPT.Reflection.Patching;
+using UnityEngine.EventSystems;
 
-namespace MaxDura
+namespace RepairMaxDurabilityClient.Patches
 {
     public class RepairMaxDurability : ModulePatch
     {

@@ -6,20 +6,20 @@
  * */
 
 using BepInEx;
+using RepairMaxDurabilityClient.Patches;
 
-namespace MaxDura
-{
-    [BepInPlugin("com.egbog.maxdura", "MaxDurability", "1.3.1")]
+namespace RepairMaxDurabilityClient {
+    [BepInPlugin("com.egbog.maxdura", "MaxDurability", "2.0.0")]
     [BepInProcess("EscapeFromTarkov.exe")]
     public class Plugin : BaseUnityPlugin
     {
-        void Awake()
+        private void Awake()
         {
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
-            new MaxDura.RepairMaxDurability().Enable();
-            new MaxDura.RepairWindowPatch().Enable();
+            new RepairMaxDurability().Enable();
+            new RepairWindowPatch().Enable();
         }
     }
 }

@@ -2,7 +2,7 @@
 using EFT.InventoryLogic;
 using Newtonsoft.Json.Linq;
 
-namespace MaxDura
+namespace RepairMaxDurabilityClient.Utils
 {
     public class ParseProfile
     {
