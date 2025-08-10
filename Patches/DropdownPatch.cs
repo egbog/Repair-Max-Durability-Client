@@ -29,8 +29,8 @@ namespace MaxDura
         {
             // check that we actually have Spare firearm parts in our inventory
             // get List<GClass873> RepairKitsCollections from GInterface37 __result
-            List<RepairKits> check = (List<RepairKits>)RepairKitsCollections.GetValue(__result);
-            bool contains = check.Exists(x => x.LocalizedName.Contains("Spare firearm parts"));
+            List<RepairKits> check    = (List<RepairKits>)RepairKitsCollections.GetValue(__result);
+            bool             contains = check.Exists(x => x.repairKitsTemplateClass._id == "86afd148ac929e6eddc5e370");
 
             // we good to go
             if (contains)
@@ -43,7 +43,7 @@ namespace MaxDura
                 List<RepairKits> __list_1 = (List<RepairKits>)RepairKitsCollections.GetValue(gclass874);
 
                 // if list contains our item then do work
-                __list_1.Remove(__list_1.First(x => x.LocalizedName.Contains("Spare firearm parts")));
+                __list_1.Remove(__list_1.First(x => x.repairKitsTemplateClass._id == "86afd148ac929e6eddc5e370"));
                 // replace with our list_1 with Spare firearm parts removed
                 list_1.SetValue(gclass874, __list_1);
 

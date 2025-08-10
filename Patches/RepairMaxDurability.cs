@@ -29,9 +29,9 @@ namespace MaxDura
         {
             return item.Owner.OwnerType == EOwnerType.Profile;
         }
-        public static bool CheckName(Item item)
+        public static bool CheckID(Item item)
         {
-            return item.LocalizedName().Contains("Spare firearm parts");
+            return item.TemplateId == "86afd148ac929e6eddc5e370";
         }
         public static bool CheckDurabilityIsWithinRange(RepairableComponent repairableComponent1)
         {
@@ -71,7 +71,7 @@ namespace MaxDura
                 targetItem.TryGetItemComponent<ArmorComponent>(out ArmorComponent armorComponent);
 
                 // check target item ownership
-                start = CheckName(dragItemContext.Item) && CheckOwner(targetItem) && repairableComponent != null && armorComponent == null;
+                start = CheckID(dragItemContext.Item) && CheckOwner(targetItem) && repairableComponent != null && armorComponent == null;
             }
 
             // only do work when our item is dragged AND dragged onto another item
