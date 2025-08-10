@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairMaxDurabilityClient", "RepairMaxDurabilityClient.csproj", "{AFA6CE2A-A6F9-BEEE-3954-3FA9C930BBE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA6CE2A-A6F9-BEEE-3954-3FA9C930BBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA6CE2A-A6F9-BEEE-3954-3FA9C930BBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA6CE2A-A6F9-BEEE-3954-3FA9C930BBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA6CE2A-A6F9-BEEE-3954-3FA9C930BBE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B74AF728-63E7-4E52-9B36-AEE05BAB3701}
+	EndGlobalSection
+EndGlobal
